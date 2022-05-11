@@ -267,9 +267,50 @@
         </section>
         <!-- Бекдроп + модальное окно -->
         <div class="backdrop is-hidden" data-modal>
-            <div class="modal">
-                <button type="button" class="exit-modal-btn" data-modal-close><svg height="18" width="18"><use href="./images/icons.svg#icon-close-modal"></use></svg>
+            <div role="group" class="modal">
+                <button type="button" class="exit-modal-btn" data-modal-close><svg class="icon-exit-modal" height="18" width="18"><use href="./images/icons.svg#icon-close-modal"></use></svg>
                 </button>
+
+                <form class="modal-form">
+                    <p class="modal-message">Оставьте свои данные, мы вам перезвоним</p>
+                    <label class="form-field">
+                        <span class="field-name">Имя</span>
+                        <input type="text" class="input-modal" name="name"/>                        
+                        <svg class="icon-input" width="18" height="18"><use href="./images/icons.svg#person-black"></use></svg>
+                    </label>
+
+                    <label class="form-field">
+                        <span class="field-name">Телефон</span>
+                        <input type="tel" class="input-modal" name="tel"/>                        
+                        <svg class="icon-input" width="18" height="18"><use href="./images/icons.svg#phone-black"></use></svg>
+                    </label>
+
+                    <label class="form-field">
+                        <span class="field-name">Почта</span>
+                        <input type="email" class="input-modal" name="email"/>                        
+                        <svg class="icon-input" width="18" height="18"><use href="./images/icons.svg#email-black"></use></svg>
+                    </label>
+
+                    <label for="textarea-modal" class="label-text">Комментарий</label>                        
+                        <textarea 
+                        id="textarea-modal"
+                        type="text" 
+                        class="textarea-modal" 
+                        name="comment" 
+                        placeholder="Введите текст">
+                    </textarea>
+
+                    <label class="label-checkbox"> <input 
+                        class="policy-checkbox"
+                        name="policy"
+                        type="checkbox"
+                        value="agree"
+                        /> <span class="icon-policy"></span>
+                        Соглашаюсь с рассылкой и принимаю&nbsp;<a class="policy-link" href=""> Условия договора</a>
+                    </label>
+                    <button type="submit" class="modal-send-btn">Отправить 
+                    </button>       
+                </form>
             </div>
         </div>
 
@@ -277,7 +318,7 @@
 
     <footer class="footer">
         <div class="container flex">
-            <div><a lang="en" class="logo" href="">Web<span class="logo-white">Studio</span></a>
+            <div class="div-adress"><a lang="en" class="logo" href="">Web<span class="logo-white">Studio</span></a>
         <address class="address">            
             <p class="physical-address">г. Киев, пр-т Леси Украинки, 26</p>
             <ul class="list-item">
@@ -310,6 +351,18 @@
                         </svg></a>
                     </li>
                 </ul>
+            </div>
+
+            <div class="join-email">
+                <h3 class="title">Подпишитесь на рассылку</h3>
+                <form name="join-email" class="form-footer">
+                    <label class="label-email">
+                    <input type="email" class="input-email" name="input-join-email" placeholder="E-mail"/>
+                    </label>
+                    <button type="submit" class="join-email-btn">Подписаться 
+                        <svg width="24" height="24" class="icon-email-footer"><use href="./images/icons.svg#send"></use></svg>
+                    </button> 
+                </form>
             </div>
         </div>
     </footer>
